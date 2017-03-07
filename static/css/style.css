@@ -1,0 +1,16 @@
+h1 {
+    display: none;
+}
+
+/*MOBILE*/
+
+/*NAVBAR*/
+
+.navbar-header {
+    background-color: rgb(45, 92, 29);
+}
+
+.navbar-brand {
+    font-family: "Purisa";
+    font-weight: bolder;
+}
