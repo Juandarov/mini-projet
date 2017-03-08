@@ -1,6 +1,7 @@
 body {
     background-color: #E7E5D9;
-    }
+}
+
 .container {
     padding: 0;
 }
@@ -10,7 +11,6 @@ h1 {
 }
 
 /*MOBILE*/
-
 /*NAVBAR*/
 
 .navbar-header {
@@ -26,26 +26,42 @@ h1 {
     background-color: rgba(219, 219, 219, 0.43);
 }
 
+.navbar {
+    margin: 0;
+}
+
 .navbar-toggle {
     background-color: #333;
 }
 
+
 /*main*/
-#slides a {
-    display: none;
+
+.slidesjs-next, .slidesjs-previous, .slidesjs-stop {
+    display: none !important;
 }
+
 h3 {
     background-image: url(../images/seigaiha.jpg);
     text-align: center;
     font-family: "Purisa";
     font-weight: bolder;
-    padding: 0.7em 0;
-    margin-bottom: 0;
+    padding: 0.5em 0;
+    margin: 0;
 }
+
 main p {
-    background-color: #c9cbb8;
+    margin: 2em 0;
+    padding: 0.5em;
     text-align: justify;
 }
+
+#slides, .container > main:nth-child(4) > p:nth-child(2) {
+    padding: 0.5em;
+    background-color: rgb(247, 242, 231);
+}
+
+
 /*search in navbar//*/
 
 .form-control {
@@ -63,11 +79,20 @@ main p {
     background-color: rgb(111, 111, 111);
     color: white;
 }
+.products {
+    display: flex;
+    justify-content: center;
+}
+
+a.btn {
+    margin: 1em 0 3em 0;
+}
 
 
 /*FOOTER*/
 
-footer {
+.container footer {
+    width: 100%;
     text-align: center;
     background-image: url(../images/palm.jpg);
     padding: 0.75em 0;
@@ -77,4 +102,53 @@ footer p {
     margin: 0;
     font-weight: bolder;
     background-color: rgba(219, 219, 219, 0.43);
+}
+
+
+/*CATALOGUE*/
+.filtres {
+    background-color: #3D3D3D;
+    padding: 2em;
+}
+.produit {
+    margin: 1em;
+    /*padding: 1em;*/
+}
+.produit img {
+    width: 30%;
+    float: left;
+    margin: 1em;
+}
+.produit p {
+    padding: 1em;
+}
+
+/*MOBILE */
+
+@media screen and (max-width: 768px) {
+
+    .row, .col-sm-6 {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    footer {
+        bottom: 0;
+        position: relative;
+    }
+
+}
+
+/*TABLETTE*/
+
+@media screen and (min-width: 770px) {
+    .container{
+        width: 100%;
+    }
+
+    footer {
+        bottom: 0;
+        position: absolute;
+    }
+
 }
