@@ -29,13 +29,13 @@ h2 {
 
 /*search in navbar//*/
 
-.form-control {
+#myNavbar > div:nth-child(2) > input:nth-child(1) {
     width: 85%;
     background-color: rgb(212, 212, 212);
     color: white;
 }
 
-.form-group {
+#myNavbar > div:nth-child(2) {
     display: flex;
     justify-content: space-between;
 }
@@ -43,6 +43,12 @@ h2 {
 #search {
     background-color: rgb(111, 111, 111);
     color: white;
+}
+
+/*FORM*/
+
+#myForm {
+    padding: 0.75em;
 }
 
 
