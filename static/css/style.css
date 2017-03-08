@@ -34,6 +34,7 @@ h1 {
 #slides a {
     display: none;
 }
+
 h3 {
     background-image: url(../images/seigaiha.jpg);
     text-align: center;
@@ -77,4 +78,23 @@ footer p {
     margin: 0;
     font-weight: bolder;
     background-color: rgba(219, 219, 219, 0.43);
+}
+
+
+/*CATALOGUE*/
+.filtres {
+    background-color: #3D3D3D;
+    padding: 2em;
+}
+.produit {
+    margin: 1em;
+    /*padding: 1em;*/
+}
+.produit img {
+    width: 30%;
+    float: left;
+    margin: 1em;
+}
+.produit p {
+    padding: 1em;
 }
