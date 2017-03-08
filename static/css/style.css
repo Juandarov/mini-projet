@@ -10,12 +10,6 @@ h1 {
     display: none;
 }
 
-.row, .col-sm-6 {
-    padding: 0px !important;
-    margin: 0px;
-}
-
-
 /*MOBILE*/
 /*NAVBAR*/
 
@@ -57,7 +51,7 @@ h3 {
 }
 
 main p {
-    margin: 1em 0;
+    margin: 2em 0;
     padding: 0.5em;
     text-align: justify;
 }
@@ -84,6 +78,14 @@ main p {
 #search {
     background-color: rgb(111, 111, 111);
     color: white;
+}
+.products {
+    display: flex;
+    justify-content: center;
+}
+
+a.btn {
+    margin: 1em 0 3em 0;
 }
 
 
@@ -120,10 +122,33 @@ footer p {
 .produit p {
     padding: 1em;
 }
+
+/*MOBILE */
+
 @media screen and (max-width: 768px) {
+
+    .row, .col-sm-6 {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
     footer {
         bottom: 0;
-        position: fixed;
+        position: relative;
+    }
+
+}
+
+/*TABLETTE*/
+
+@media screen and (min-width: 770px) {
+    .container{
+        width: 100%;
+    }
+
+    footer {
+        bottom: 0;
+        position: absolute;
     }
 
 }
