@@ -10,11 +10,11 @@
     <link href="static/external/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
 
+
 </head>
 
 <body>
     <div class="container">
-
         <h1>Mini Projet</h1>
         <header>
             <nav class="navbar navbar-inverse">
@@ -34,41 +34,47 @@
                             <li><a href="#">Panier</a></li>
                             <li><a href="form.html">Contact</a></li>
                         </ul>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <button id="search" type="submit" class="btn btn-default">find</button>
+                        </div>
                     </div>
                 </div>
             </nav>
         </header>
     </div>
     <div class="row">
-
+        <div class="col-xs-12 col-ld-6">
+            <nav>
+                <h3>Le Top des ventes</h3>
+                <div id="slides">
+                    <img src="static/images/cactus.jpg" class="img-responsive">
+                    <img src="static/images/gentiane.jpg" class="img-responsive">
+                    <img src="static/images/lotus.jpg" class="img-responsive">
+                    <img src="static/images/tournesol.jpg" class="img-responsive">
+                    <img src="static/images/orchidee.jpg" class="img-responsive">
+                    <img src="static/images/violettes.jpg" class="img-responsive">
+                </div>
+            </nav>
+        </div>
+        <div class="col-xs-12 col-ld-6">
+            <main>
+                <h3>Notre entreprise</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </main>
+        </div>
     </div>
-    <div class="col-xs-12 col-ld-6">
-        <nav>
-            <h3>Le Top des ventes</h3>
-            <div id="slides">
-                <img src="static/images/cactus.jpg" class="img-responsive">
-                <img src="static/images/gentiane.jpg" class="img-responsive">
-                <img src="static/images/lotus.jpg" class="img-responsive">
-                <img src="static/images/tournesol.jpg" class="img-responsive">
-                <img src="static/images/orchidee.jpg" class="img-responsive">
-                <img src="static/images/violettes.jpg" class="img-responsive">
-            </div>
-        </nav>
-    </div>
-    <div class="col-xs-12 col-ld-6">
-        <main>
-            <h3>Notre entreprise</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </main>
-    </div>
+    <footer>
+        <p>Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
+    </footer>
 
-
-        <script src="static/external/jquery/dist/jquery.min.js"></script>
-        <script src="static/external/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="static/external/SlidesJS/source/jquery.slides.js">
-        </script>
-
-        <script src="static/js/script.js"></script>
+    <script src="static/external/jquery/dist/jquery.min.js"></script>
+    <script src="static/external/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/external/SlidesJS/source/jquery.slides.js">
+    </script>
+    <script src="static/external/bootstrap-validator/dist/validator.min.js"></script>
+    <script src="static/js/script.js"></script>
 </body>
 
 </html>
