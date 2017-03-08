@@ -1,6 +1,7 @@
 body {
     background-color: #E7E5D9;
-    }
+}
+
 .container {
     padding: 0;
 }
@@ -9,8 +10,13 @@ h1 {
     display: none;
 }
 
-/*MOBILE*/
+.row, .col-sm-6 {
+    padding: 0px !important;
+    margin: 0px;
+}
 
+
+/*MOBILE*/
 /*NAVBAR*/
 
 .navbar-header {
@@ -26,13 +32,19 @@ h1 {
     background-color: rgba(219, 219, 219, 0.43);
 }
 
+.navbar {
+    margin: 0;
+}
+
 .navbar-toggle {
     background-color: #333;
 }
 
+
 /*main*/
-#slides a {
-    display: none;
+
+.slidesjs-next, .slidesjs-previous, .slidesjs-stop {
+    display: none !important;
 }
 
 h3 {
@@ -40,13 +52,22 @@ h3 {
     text-align: center;
     font-family: "Purisa";
     font-weight: bolder;
-    padding: 0.7em 0;
-    margin-bottom: 0;
+    padding: 0.5em 0;
+    margin: 0;
 }
+
 main p {
-    background-color: #c9cbb8;
+    margin: 1em 0;
+    padding: 0.5em;
     text-align: justify;
 }
+
+#slides, .container > main:nth-child(4) > p:nth-child(2) {
+    padding: 0.5em;
+    background-color: rgb(247, 242, 231);
+}
+
+
 /*search in navbar//*/
 
 .form-control {
@@ -68,7 +89,8 @@ main p {
 
 /*FOOTER*/
 
-footer {
+.container footer {
+    width: 100%;
     text-align: center;
     background-image: url(../images/palm.jpg);
     padding: 0.75em 0;
@@ -97,4 +119,11 @@ footer p {
 }
 .produit p {
     padding: 1em;
+}
+@media screen and (max-width: 768px) {
+    footer {
+        bottom: 0;
+        position: fixed;
+    }
+
 }
