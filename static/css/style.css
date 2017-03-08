@@ -1,5 +1,12 @@
+html {
+  height: 100%;
+}
+
 body {
     background-color: #E7E5D9;
+    position: relative;
+    margin: 0;
+    min-height: 100%;
 }
 
 .container {
@@ -155,8 +162,21 @@ footer p {
 /*MOBILE */
 
 @media screen and (max-width: 768px) {
+    footer {
+        bottom: 0;
+        position: absolute;
+    }
 
-    .row, .col-sm-6 {
+    h3 {
+        width: 100%;
+    }
+
+    .row, div.col-sm-6 {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    .col-sm-8 {
         padding: 0px !important;
         margin: 0px !important;
     }
@@ -170,14 +190,43 @@ footer p {
 
 /*TABLETTE*/
 
-@media screen and (min-width: 770px) {
-    .container{
+@media screen and (min-width: 769px) {
+
+    .container {
         width: 100%;
+    }
+
+    div.produit > section {
+        overflow: auto;
+    }
+
+    .row, .col-sm-8 {
+        margin: 0px !important;
     }
 
     footer {
         bottom: 0;
         position: absolute;
     }
+}
+
+/*web */
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 992px;
+        margin: auto;
+    }
+
+    footer {
+        bottom: 0;
+        position: static;
+    }
+
+    .col-sm-8 {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
 
 }
