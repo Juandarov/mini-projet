@@ -30,8 +30,8 @@
                         <ul class="nav navbar-nav">
                             <li><a href="index.html">Home</a></li>
                             <li class="active"><a href="#">Catalogue</a></li>
-                            <li><a href="#">Panier</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="panier.html">Panier</a></li>
+                            <li><a href="form.html">Contact</a></li>
                         </ul>
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search">
@@ -45,7 +45,7 @@
             <div class="col-md-4 form-group filtres">
                 <!-- <nav> -->
                 <!-- <div class=""> -->
-                <input type="text" class="form-control" placeholder="Search">
+                <input type="text" class="form-control search" placeholder="Search">
                 <button id="search" type="submit" class="btn btn-default">find</button>
                 <!-- </div> -->
                 <!-- </nav> -->
@@ -54,19 +54,19 @@
                 <div class="row">
                     <main>
                         <div class="col-md-6 produit">
-                            <h3>Cactus</h3>
+                            <h3 class="name">Cactus</h3>
                             <section>
                                 <img src="static/images/cactus.jpg" class="img-responsive" alt="cactus">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                <p class="plant">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a class="btn btn-default text-right" href="cactus.html" role="button">En savoir plus</a>
                                 </p>
                             </section>
                         </div>
                         <div class="col-md-6 produit">
-                            <h3>Gentiane</h3>
+                            <h3 class="name">Gentiane</h3>
                             <section>
                                 <img src="static/images/gentiane.jpg" class="img-responsive" alt="gentiane">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                <p class="plant">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                                     laborum.
                                 </p>
@@ -74,27 +74,25 @@
                         </div>
                         <!-- <div class="row"> -->
                         <div class="col-md-6 produit">
-                            <h3>Lotus</h3>
+                            <h3 class="name">Lotus</h3>
                             <section>
                                 <img src="static/images/lotus.jpg" class="img-responsive" alt="lotus">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                <p class="plant">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                                     laborum.
                                 </p>
                             </section>
                         </div>
                         <div class="col-md-6 produit">
-                            <h3>Orchidée</h3>
+                            <h3 class="name">Orchidée</h3>
                             <section>
                                 <img src="static/images/orchidee.jpg" class="img-responsive" alt="orchidee">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                <p class="plant">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                                     laborum.
                                 </p>
                             </section>
                         </div>
-                        <!-- </div> -->
-                        <!-- </main> -->
                 </div>
             </div>
         </div>
@@ -106,7 +104,9 @@
     <script src="static/external/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="static/external/SlidesJS/source/jquery.slides.js"></script>
     <script src="static/external/bootstrap-validator/dist/validator.min.js"></script>
-    <script src="static/js/script.js"></script>
+    <script src="static/external/list.js/dist/list.min.js"></script>
+
+    <script src="static/js/cat.js"></script>
 </body>
 
 </html>

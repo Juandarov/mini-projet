@@ -65,21 +65,3 @@ h3 {
 #myForm {
     padding: 0.75em;
 }
-
-
-/*FOOTER*/
-
-footer {
-    text-align: center;
-    background-image: url(../images/palm.jpg);
-    padding: 0.75em 0;
-    position:absolute;
-    bottom:0;
-    width:100%;
-}
-
-p {
-    margin: 0;
-    font-weight: bolder;
-    background-color: rgba(219, 219, 219, 0.43);
-}
