@@ -47,7 +47,6 @@ h1 {
 .slidesjs-next, .slidesjs-previous, .slidesjs-stop {
     display: none !important;
 }
-
 h3 {
     background-image: url(../images/seigaiha.jpg);
     text-align: center;
@@ -56,13 +55,11 @@ h3 {
     padding: 0.5em 0;
     margin: 0;
 }
-
 main p {
     margin: 2em 0;
     padding: 0.5em;
     text-align: justify;
 }
-
 #slides, .container > main:nth-child(4) > p:nth-child(2) {
     padding: 0.5em;
     background-color: rgb(247, 242, 231);
@@ -76,12 +73,10 @@ main p {
     background-color: rgb(212, 212, 212);
     color: white;
 }
-
 .form-group {
     display: flex;
     justify-content: space-between;
 }
-
 #search {
     background-color: rgb(111, 111, 111);
     color: white;
@@ -90,21 +85,18 @@ main p {
     display: flex;
     justify-content: center;
 }
-
 a.btn {
     margin: 1em 0 3em 0;
 }
 
 
 /*FOOTER*/
-
 .container footer {
     width: 100%;
     text-align: center;
     background-image: url(../images/palm.jpg);
     padding: 0.75em 0;
 }
-
 footer p {
     margin: 0;
     font-weight: bolder;
@@ -128,6 +120,12 @@ footer p {
 }
 .produit p {
     padding: 1em;
+    /*margin: 0;*/
+}
+.produit a {
+    background-color: #3D3D3D;
+    color: white;
+    margin: 0;
 }
 /*PANIER*/
 #panier p {
