@@ -17,7 +17,7 @@
   "dependencies": {
     "jquery": "^3.1.1",
     "bootstrap": "^3.3.7",
-    "SlidesJS": "^3.0.4"
+    "SlidesJS": "^3.0.4",
     "bootstrap-validator": "^0.11.9"
 
   }
