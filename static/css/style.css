@@ -122,6 +122,35 @@ footer p {
 .produit p {
     padding: 1em;
 }
+/*PANIER*/
+#panier p {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+#panier a {
+    font-style: none;
+    color: #333333;
+}
+.fa-2x {
+	font-size: 1.5em;
+}
+#panier h4 {
+    display: block;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+	padding: 8px;
+	line-height: 1.42857143;
+	vertical-align: middle;
+	border-top: 1px solid #ddd;
+}
+.total {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: right;
+}
+
 
 /*MOBILE */
 
