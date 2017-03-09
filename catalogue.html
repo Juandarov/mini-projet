@@ -44,12 +44,26 @@
         <div class="row">
             <div class="col-sm-4 form-group filtres">
                 <input type="text" class="form-control search" placeholder="Search">
-                <button id="search" type="submit" data-sort="name" class="btn btn-default sort">find</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger">Prix</button>
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" id="vingt">20€ à 30€</a></li>
+                        <li><a href="#" id="trente">31€ à 40€</a></li>
+                        <li><a href="#" id="plus">41€ à plus</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Vois tous les prix</a></li>
+                    </ul>
+                </div>
+                <!-- <button id="search" type="submit" data-sort="name" class="btn btn-default sort">find</button> -->
             </div>
             <div class="col-sm-8">
                 <main>
                     <div class="row" id="catalogue">
-                    <!-- <div class="produit col-md-10">
+                        <!-- <div class="produit col-md-10">
                         <h3 class="name">Cactus</h3>
                         <section>
                             <img src="static/images/cactus.jpg" class="img-responsive" alt="cactus">
@@ -58,28 +72,28 @@
                             </p>
                         </section>
                     </div> -->
-                </div>
+                    </div>
                 </main>
             </div>
         </div>
         <nav aria-label="Page navigation">
-          <ul class="pagination">
-            <li>
-              <a href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-              <a href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </div>
     <script src="static/external/jquery/dist/jquery.min.js"></script>
