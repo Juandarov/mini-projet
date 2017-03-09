@@ -109,18 +109,72 @@ $(document).ready(function() {
     var catalog = [product0 ,product1 ,product2 ,product3 ,product4 ,product5 ,product6 ,product7 ,product8 ,product9 ,]
 
 
+    for (var i = 0; i < catalog.length; i++) {
+        var maPhotoOne = $('<img class="img-responsive" src='+catalog[parseInt(Math.random()*catalog.length)].pictures+'></img>');
+        var maPhotoTwo = $('<img class="img-responsive" src='+catalog[parseInt(Math.random()*catalog.length)].pictures+'></img>');
+        console.log(maPhotoOne);
+        var maPhotoThree = $('<img class="img-responsive" src='+catalog[parseInt(Math.random()*catalog.length)].pictures+'></img>');
+        console.log(maPhotoOne);
+        $("#slides").append(maPhotoOne);
+        $("#slides").append(maPhotoTwo);
+        $("#slides").append(maPhotoThree);
+    }
+    $("#slides").slidesjs({
+
+        width: 940,
+        height: 528,
+        play: {
+            active: true,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+            effect: "slide",
+        // [string] Can be either "slide" or "fade".
+            interval: 4000,
+        // [number] Time spent on each slide in milliseconds.
+            auto: true,
+        // [boolean] Start playing the slideshow on load.
+            swap: true,
+        // [boolean] show/hide stop and play buttons
+            pauseOnHover: false,
+        // [boolean] pause a playing slideshow on hover
+            restartDelay: 2500,
+        // [number] restart delay on inactive slideshow
+    },
+        pagination: {
+            active: false,
+        // [boolean] Create pagination items.
+        // You cannot use your own pagination. Sorry.
+        effect: "fade",
+        // [string] Can be either "slide" or "fade".
+    },
+
+      });
+
 
     var maDiv = $('<div class="produit col-md-10"></div>');
 
-for (var i = 0; i < catalog.length; i++) {
-    var maSection = $('<section></section>')
-    var monImage = $('<img src='+catalog[i].thumb+'></img>');
-    var monTitre = $('<h3 class="name">'+catalog[i].name+'</h3>');
-    var maDescription = $('<p class="plant">'+catalog[i].description+'<a class="btn btn-default" href="produit.html" role="button">En savoir plus</a></p>');
-        $("#catalogue").append(maDiv);
-        maDiv.append(monTitre);
-        maDiv.append(maSection);
-        maSection.append(monImage);
-        maSection.append(maDescription);
-}
+    for (var i = 0; i < catalog.length; i++) {
+        var maSection = $('<section></section>')
+        var monImage = $('<img src='+catalog[i].thumb+'></img>');
+        var monTitre = $('<h3 class="name">'+catalog[i].name+'</h3>');
+        var maDescription = $('<p class="plant">'+catalog[i].description+'<a class="btn btn-default" href="produit.html" role="button">En savoir plus</a></p>');
+        var monPrix = $('<p class="prix">'+catalog[i].price+' €</p>');
+            $("#catalogue").append(maDiv);
+            maDiv.append(monTitre);
+            maDiv.append(maSection);
+            maSection.append(monImage);
+            maSection.append(maDescription);
+            maSection.append(monPrix);
+            $(".btn-default").click(function(){
+                console.log(monTitre);
+                // var monTitre = $('<h3 class="name">'+catalog[$(this)].name+'</h3>');
+                $("#fiche").append(monTitre);
+                // var monImage = $('<img src='+catalog[$(this)].thumb+'></img>');
+                fiche.append(monImage);
+                // var maDescription = $('<p class="plant">'+catalog[$(this)].description+'</p>');
+                fiche.append(maDescription);
+            });
+    }
+// ))
+
 })
