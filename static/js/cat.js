@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
     var maDiv = $('<div class="produit col-md-10"></div>');
