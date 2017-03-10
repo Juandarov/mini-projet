@@ -15,13 +15,4 @@ $(document).ready(function() {
     var monPanier = $('<button type="button" class="btn btn-success"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Ajouter au panier</button>')
     $("#fiche").append(monPanier);
 
-    var maPlante = {
-        propriete1: "catalog[GET_PARAM("produit")].thumb",
-        propriete2: "catalog[GET_PARAM("produit")].name",
-        propriete3: "catalog[GET_PARAM("produit")].price"
-    };
-
-    var maPlante_json = JSON.stringfy(maPlante);
-    sessionStorage.setItem("objet", maPlante_json)
-
 })

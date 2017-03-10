@@ -19,6 +19,6 @@ $(document).ready(function() {
         //     if (monPrix < 30) {
         //     }
 
-        })
+        // })
     }
 })
