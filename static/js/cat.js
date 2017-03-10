@@ -55,5 +55,24 @@ $(document).ready(function() {
         var lesDivProduit = $(".le_produit");
             var leProduit = $(lesDivProduit[i])
             lesDivProduit.show();
-    })
+    });
+
+    // $(".search").blur(function() {
+    //     var lesDivProduit = $(".le_produit");
+    //     for (var i = 0; i < lesDivProduit.length; i++) {
+    //         var leProduit = $(lesDivProduit[i]);
+    //         var monContenu = lesDivProduit.val();
+    //         var maRecherche = $('.recherche').val();
+    //         console.log(maRecherche);
+    //         var result = monContenu.indexOf(maRecherche)
+    //
+    //         if (result = -1) {
+    //             alert("il n'y a pas de résultat à votre recherche");
+    //         }
+    //         else {
+    //             alert("il n'y a un résultat à votre recherche");;
+    //         }
+    //     }
+    // })
+
 })
