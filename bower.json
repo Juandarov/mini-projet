@@ -20,7 +20,7 @@
     "SlidesJS": "^3.0.4",
     "bootstrap-validator": "^0.11.9",
     "font-awesome": "Font-Awesome#^4.7.0",
-    "list.js": "^1.5.0"
-
+    "list.js": "^1.5.0",
+    "paginate": "https://github.com/neighbordog/jquery-paginate.git#^0.3.0"
   }
 }

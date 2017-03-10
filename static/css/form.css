@@ -72,6 +72,17 @@ h3 {
         width: 100%;
     }
 
+    .nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navbar-header {
+        width: 100%;
+        text-align: center;
+    }
+
 }
 
 /*web */

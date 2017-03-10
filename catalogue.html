@@ -8,6 +8,7 @@
     <title>Catalogue</title>
 
     <link href="static/external/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/external/paginate/src/jquery.paginate.css">
     <link rel="stylesheet" href="static/css/style.css">
 
 </head>
@@ -33,16 +34,12 @@
                             <li><a href="panier.html">Panier</a></li>
                             <li><a href="form.html">Contact</a></li>
                         </ul>
-                        <div class="form-group">
-                            <input type="text" class="form-control recherche" placeholder="Search">
-                            <button id="search" type="submit" class="btn btn-default">find</button>
-                        </div>
                     </div>
                 </div>
             </nav>
         </header>
         <div class="row">
-            <div class="col-sm-4 form-group filtres">
+            <div class="col-sm-12 form-group filtres">
                 <input type="text" class="form-control search" placeholder="Search">
                 <div class="btn-group">
                     <button type="button" class="btn btn-danger">Prix</button>
@@ -59,7 +56,7 @@
                 </div>
                 <!-- <button id="search" type="submit" data-sort="name" class="btn btn-default sort">find</button> -->
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-12">
                 <main>
                     <div class="row" id="catalogue">
                         <!-- <div class="produit col-md-10">
@@ -75,33 +72,27 @@
                 </main>
             </div>
         </div>
-        <nav aria-label="Page navigation">
-            <ul class="pagination">
-                <li>
-                    <a href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li>
-                    <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+
     </div>
     <script src="static/external/jquery/dist/jquery.min.js"></script>
     <script src="static/external/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="static/js/catalog.js"></script>
     <script src="static/js/cat.js"></script>
+    <script src="static/external/paginate/src/jquery.paginate.js"></script>
+
+
     <script src="static/external/SlidesJS/source/jquery.slides.js"></script>
     <script src="static/external/bootstrap-validator/dist/validator.min.js"></script>
-    <script src="static/external/list.js/dist/list.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".produit").paginate({
+                'perPage': 4,
+                'scope': $('.le_produit')
+
+            });
+        });
+    </script>
 
 </body>
 
