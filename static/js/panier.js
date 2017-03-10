@@ -1,18 +1,33 @@
 $(document).ready(function() {
-    var monTitre = $('<h3 class="name">'+catalog[GET_PARAM("produit")].name+'</h3>');
-    $("#fiche").append(monTitre);
+    var monPanier_json = sessionStorage.getItem("panier");
+    var monPanier= JSON.parse(monPanier_json);
+    var indice = "";
+    var quantite = "";
+    var monPanier = {indice:quantite};
+    console.log(monPanier);
 
-    for (var i = 0; i < catalog[GET_PARAM("produit")].pictures.length; i++) {
-        var monImage = $('<img src='+catalog[GET_PARAM("produit")].pictures[i]+'></img>');
-        $("#fiche").append(monImage);
 
-    }
-
-    var maDescription = $('<p class="plant">'+catalog[GET_PARAM("produit")].description+'</p>');
-    $("#fiche").append(maDescription);
-    var monPrix = $('<p class="prix">'+catalog[GET_PARAM("produit")].price+' €</p>');
-    $("#fiche").append(monPrix);
-    var monPanier = $('<button type="button" class="btn btn-success"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Ajouter au panier</button>')
-    $("#fiche").append(monPanier);
+    // var monTableau = $();
+    // $('tbody').append('<tr></tr>');
+    // // var maRow = $('<th scope="row"></th>';
+    // $("tr").append("<th scope='row'></th>");
+    // // var maPhoto = $('<td><img src="static/images/cactus.jpg" alt="Cactus" class="img-responsive" width="40">
+    // $("tr").append('<td><img src='+catalog[indice].thumb+'></img></td>');
 
 })
+// <!-- <tr>
+//     <th scope="row"></th>
+//     <td>
+//         <img src="static/images/cactus.jpg" alt="Cactus" class="img-responsive" width="40">
+//     </td>
+//     <td>
+//         <p>Cactus</p>
+//     </td>
+//     <td>
+//         <p>25 964 €</p>
+//     </td>
+//     <td>
+//         <input type=number> <a href="#"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a>
+//     </td>
+//     <td></td>
+// </tr>

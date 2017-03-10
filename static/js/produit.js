@@ -12,16 +12,18 @@ $(document).ready(function() {
     $("#fiche").append(maDescription);
     var monPrix = $('<p class="prix">'+catalog[GET_PARAM("produit")].price+' €</p>');
     $("#fiche").append(monPrix);
-    var monPanier = $('<button type="button" class="btn btn-success"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Ajouter au panier</button>')
-    $("#fiche").append(monPanier);
+    var bouton = $('<a class="btn btn-default" href="#" role="button"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Ajouter au panier</a>')
+    $("#fiche").append(bouton);
 
-    var maPlante = {
-        propriete1: "catalog[GET_PARAM("produit")].thumb",
-        propriete2: "catalog[GET_PARAM("produit")].name",
-        propriete3: "catalog[GET_PARAM("produit")].price"
-    };
+    // <a class="btn btn-default" href="produit.html?produit='+[i]+'" role="button">En savoir plus</a></p>
 
-    var maPlante_json = JSON.stringfy(maPlante);
-    sessionStorage.setItem("objet", maPlante_json)
+    bouton.click(function(){
+
+    var monPanier = {}
+    monPanier[GET_PARAM("produit")]  = 1
+    var monPanier_json = JSON.stringify(monPanier);
+    sessionStorage.setItem("panier", monPanier_json);
+})
+
 
 })
