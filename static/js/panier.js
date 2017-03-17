@@ -1,33 +1,33 @@
 $(document).ready(function() {
     var monPanier_json = sessionStorage.getItem("panier");
     var monPanier= JSON.parse(monPanier_json);
-    var indice = "";
-    var quantite = "";
-    var monPanier = {indice:quantite};
-    console.log(monPanier);
 
+    for (var indice in monPanier) {
+        var quantite = monPanier[indice]
+        // var monTableau = $();
+        $('tbody').append('<tr class="produit"></tr>');
+        // var maRow = $('<th scope="row"></th>';
+        $(".produit").append("<th scope='row'></th>");
+        // var maPhoto = $('<td><img src="static/images/cactus.jpg" alt="Cactus" class="img-responsive" width="40">
+        $(".produit").append('<td><img src='+catalog[indice].thumb+'</img></td>');
+        $(".produit").append('<td><p>'+catalog[indice].name+'</p></td>');
+        $(".produit").append('<td><p>'+catalog[indice].price+'</p></td>');
+        $(".produit").append('<td><input id="qty" type=number value ='+quantite+'><i class="fa fa-trash fa-2x" aria-hidden="true"></i></td>');
+        var prixProduit = parseInt(catalog[indice].price);
+        var totalTTCDuProduit = parseInt(prixProduit*quantite);
+        $(".produit").append('<td>'+totalTTCDuProduit+'</td>');
+    };
+    $("#qty").on("change",function() {
+        for (var i = 0; i < monPanier[indice].length; i++) {
+            var newQuantite = $(this).val();
+            // var quantite_json = sessionStorage.getItem("nbre");
+            // var quantite= JSON.parse(quantite_json);
+            var totalTTCDuProduit = parseInt(prixProduit*newQuantite);
+            console.log(totalTTCDuProduit);
 
-    // var monTableau = $();
-    // $('tbody').append('<tr></tr>');
-    // // var maRow = $('<th scope="row"></th>';
-    // $("tr").append("<th scope='row'></th>");
-    // // var maPhoto = $('<td><img src="static/images/cactus.jpg" alt="Cactus" class="img-responsive" width="40">
-    // $("tr").append('<td><img src='+catalog[indice].thumb+'></img></td>');
+        }
+    })
+    // var totalTTC += totalTTCDuProduit;
+    // $(".totalTTC").append('<p>'+totalTTC+'</p>');
 
 })
-// <!-- <tr>
-//     <th scope="row"></th>
-//     <td>
-//         <img src="static/images/cactus.jpg" alt="Cactus" class="img-responsive" width="40">
-//     </td>
-//     <td>
-//         <p>Cactus</p>
-//     </td>
-//     <td>
-//         <p>25 964 €</p>
-//     </td>
-//     <td>
-//         <input type=number> <a href="#"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a>
-//     </td>
-//     <td></td>
-// </tr>

@@ -70,7 +70,7 @@ $(document).ready(function() {
     //             alert("il n'y a pas de résultat à votre recherche");
     //         }
     //         else {
-    //             alert("il n'y a un résultat à votre recherche");;
+    //             alert("il y a un résultat à votre recherche");;
     //         }
     //     }
     // })
