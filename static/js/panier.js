@@ -1,33 +1,26 @@
 $(document).ready(function() {
-    var monPanier_json = sessionStorage.getItem("panier");
-    var monPanier= JSON.parse(monPanier_json);
-    var indice = "";
-    var quantite = "";
-    var monPanier = {indice:quantite};
-    console.log(monPanier);
+    var monPanier_json = localStorage.getItem("panier");
+    var monPanier = JSON.parse(monPanier_json);
 
+    for (var panier in monPanier) {
 
-    // var monTableau = $();
-    // $('tbody').append('<tr></tr>');
-    // // var maRow = $('<th scope="row"></th>';
-    // $("tr").append("<th scope='row'></th>");
-    // // var maPhoto = $('<td><img src="static/images/cactus.jpg" alt="Cactus" class="img-responsive" width="40">
-    // $("tr").append('<td><img src='+catalog[indice].thumb+'></img></td>');
+        var myArticle = $('<tr></tr>');
+        var mySpacebar = $('<td></td>');
+        var myPrice = $('<td>' + '<p class="prix">' + catalog[panier].price + ' €</p>' + '</td>');
+        var myPhoto = $('<td>' + '<img src=' + catalog[panier].thumb + '></img>' + '</td>');
+        var myName = $('<td>' + '<p class="name">' + catalog[panier].name + '</p>' + '</td>');
+        var myQuantity = $('<td><input type="number" name="quantity" value="'+ monPanier[panier]+'" ><button type="button" class="btn btn-warning" aria-label="Left Align"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>');
 
+        $('table').append(myArticle);
+        myArticle.append(mySpacebar);
+        myArticle.append(myPhoto);
+        myArticle.append(myName);
+        myArticle.append(myPrice);
+        myArticle.append(myQuantity);
+
+    }
+
+    $("button").click(function() {
+        $(this).localStorage.removeItem("panier");
+    });
 })
-// <!-- <tr>
-//     <th scope="row"></th>
-//     <td>
-//         <img src="static/images/cactus.jpg" alt="Cactus" class="img-responsive" width="40">
-//     </td>
-//     <td>
-//         <p>Cactus</p>
-//     </td>
-//     <td>
-//         <p>25 964 €</p>
-//     </td>
-//     <td>
-//         <input type=number> <a href="#"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a>
-//     </td>
-//     <td></td>
-// </tr>

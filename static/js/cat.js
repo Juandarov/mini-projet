@@ -6,10 +6,10 @@ $(document).ready(function() {
     for (var i = 0; i < catalog.length; i++) {
         var maDivProduit = $('<div class="le_produit"></div>')
         var maSection = $('<section></section>')
-        var monImage = $('<img src='+catalog[i].thumb+'></img>');
-        var monTitre = $('<h3 class="name">'+catalog[i].name+'</h3>');
-        var maDescription = $('<p class="plant">'+catalog[i].description+'<a class="btn btn-default" href="produit.html?produit='+[i]+'"role="button">En savoir plus</a></p>');
-        var monPrix = $('<p class="prix">'+catalog[i].price+'€'+'</p>');
+        var monImage = $('<img src=' + catalog[i].thumb + '></img>');
+        var monTitre = $('<h3 class="name">' + catalog[i].name + '</h3>');
+        var maDescription = $('<p class="plant">' + catalog[i].description + '<a class="btn btn-default" href="produit.html?produit=' + [i] + '"role="button">En savoir plus</a></p>');
+        var monPrix = $('<p class="prix">' + catalog[i].price + '€' + '</p>');
         $("#catalogue").append(maDiv);
         maDiv.append(maDivProduit);
         maDivProduit.append(monTitre);
@@ -18,6 +18,8 @@ $(document).ready(function() {
         maSection.append(maDescription);
         maSection.append(monPrix);
     }
+
+
 
     $("#vingt").click(function() {
         var lesDivProduit = $(".le_produit");
@@ -28,8 +30,7 @@ $(document).ready(function() {
             if (prixAComparer > 31) {
                 console.log(prixAComparer);
                 leProduit.hide();
-            }
-            else {
+            } else {
                 leProduit.show();
             }
         }
@@ -44,8 +45,7 @@ $(document).ready(function() {
             if (prixAComparer > 41) {
                 console.log(prixAComparer);
                 leProduit.hide();
-            }
-            else {
+            } else {
                 leProduit.show();
             }
 
@@ -53,7 +53,7 @@ $(document).ready(function() {
     })
     $("#tous").click(function() {
         var lesDivProduit = $(".le_produit");
-            var leProduit = $(lesDivProduit[i])
-            lesDivProduit.show();
+        var leProduit = $(lesDivProduit[i])
+        lesDivProduit.show();
     })
 })
