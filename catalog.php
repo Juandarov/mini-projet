@@ -56,16 +56,45 @@
             </div>
             <div class="col-sm-12">
                 <main>
-                    <div class="row" id="catalogue"></div>
+                    <div class="row" id="catalogue">
+
+                        <?php
+                        define('MYSQL_SERVEUR', 'localhost');
+                        define('MYSQL_UTILISATEUR', 'toto');
+                        define('MYSQL_MOTDEPASSE', 'plop');
+                        define('MYSQL_BASE', 'boutique_en_ligne');
+
+
+                        $mysql = new MySQLi(MYSQL_SERVEUR, MYSQL_UTILISATEUR, MYSQL_MOTDEPASSE, MYSQL_BASE);
+
+                        $mysql->set_charset("utf8");
+                        $sql = "select * from produitt;";
+                        $result = $mysql->query($sql);
+
+                        while ($row = $result->fetch_assoc()){
+                            echo '<h3 class="name">'.$row['name_produit'].'</h3>';
+                            echo '<p class="plant">'.$row['description_produit'].'<a class="btn btn-default" "role="button">En savoir plus</a>'.'</p>';
+                            echo '<p class="prix">'.$row["price_produit"].'</p>';
+
+                            // " ".$row['description_produit']." ".$row["price_produit"]."<br/>";
+                        }
+
+                        $result->free();
+
+                        $mysql->close();
+                        ?>
+
+                    </div>
                 </main>
             </div>
         </div>
     </div>
 
+
     <script src="static/external/jquery/dist/jquery.min.js"></script>
     <script src="static/external/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="static/js/catalog.js"></script>
-    <script src="static/js/cat.js"></script>
+    <!-- <script src="static/js/catalog.js"></script> -->
+    <!-- <script src="static/js/cat.js"></script> -->
     <script src="static/external/paginate/src/jquery.paginate.js"></script>
 
     <script src="static/external/SlidesJS/source/jquery.slides.js"></script>
