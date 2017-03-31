@@ -70,7 +70,9 @@ main p {
     padding: 0.5em;
     background-color: rgb(247, 242, 231);
 }
-
+#slides ul.slidesjs-pagination {
+    display: none;
+}
 
 /*search in navbar//*/
 
@@ -129,7 +131,7 @@ footer p {
 }
 
 .produit img {
-    width: 30%;
+    width: 35%;
     float: left;
     margin: 1em;
 }
@@ -138,18 +140,32 @@ footer p {
     padding: 1em;
     /*margin: 0;*/
 }
+.prix {
+    display: inline-block;
+}
 
 .produit a {
     background-color: #3D3D3D;
     color: white;
     margin: 0;
 }
-
-.paginate-pagination>ul:nth-child(1) {
-    display: flex;
-    justify-content: center;
+a.btn {
+    display: block;
 }
 
+.paginate-pagination>ul:nth-child(1) {
+    display: inline-block;
+    justify-content: center;
+}
+/*FICHE*/
+#fiche {
+
+}
+
+#fiche img {
+width: 23.5%;
+
+}
 
 /*PANIER*/
 
