@@ -1,42 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php require 'header.php'; ?>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Catalogue</title>
-
-    <link href="static/external/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/external/paginate/src/jquery.paginate.css">
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
-
-<body>
-    <div class="container">
-        <h1>Mini Projet</h1>
-        <header>
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                        <h2 class=" enjoy-css" href="#">Mini Projet</h2>
-                    </div>price_produit
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active"><a href="#">Catalogue</a></li>
-                            <li><a href="panier.html">Panier</a></li>
-                            <li><a href="form.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
         <div class="row">
             <div class="col-sm-12 form-group filtres">
                 <input type="text" class="form-control search" placeholder="Search">
@@ -72,12 +35,17 @@
                         $result = $mysql->query($sql);
 
                         while ($row = $result->fetch_assoc()){
-                            echo '<h3 class="name">'.$row['name_produit'].'</h3>';
-                            echo '<p class="plant">'.$row['description_produit'].'<a class="btn btn-default" "role="button">En savoir plus</a>'.'</p>';
-                            echo '<p class="prix">'.$row["price_produit"].'</p>';
 
-                            // " ".$row['description_produit']." ".$row["price_produit"]."<br/>";
-                        }
+                        echo '<div class="le_produit">';
+                        echo '<h3 class="name">'.$row['name_produit'].'</h3>';
+                        echo '<section>';
+                        echo '<img src="http://placehold.it/140x140">';
+                        echo '<p class="plant">'.$row['description_produit'];
+                        echo '<a class="btn btn-default" href="http://localhost:8080/mini-projet/produit.php?id_produitt='.$row[id_produitt].'" role="button">En savoir plus</a>';
+                        echo '</p>';
+                        echo '<p class="prix">'.$row["price_produit"].' $</p>';
+                        echo '</section></div>';
+                        };
 
                         $result->free();
 
@@ -89,6 +57,8 @@
             </div>
         </div>
     </div>
+
+
 
 
     <script src="static/external/jquery/dist/jquery.min.js"></script>
