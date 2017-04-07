@@ -16,7 +16,6 @@
             $result = $mysql->query($sql);
 
             $row = $result->fetch_assoc();
-
             echo '<h3 class="name">'.$row['name_produit'].'</h3>';
             echo '<img src="http://placehold.it/400x400">';
             echo '<p class="plant">'.$row['description_produit'].'</p>';
@@ -26,7 +25,6 @@
             echo '<button type="submit" name="button">Ajouter au Panier</button>';
             echo '</form>';
             ?>
-
 
         </main>
 
