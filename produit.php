@@ -21,9 +21,15 @@
             echo '<img src="http://placehold.it/400x400">';
             echo '<p class="plant">'.$row['description_produit'].'</p>';
             echo '<p class="prix">'.$row["price_produit"].' $</p>';
-            echo '</section></div>';
+            echo '<form class="" action="http://localhost:8080/mini-projet/panier.php"  method="get">';
+            echo '<input type="number" name="quantity" value="quantity"">';
+            echo '<button type="submit" name="button">Ajouter au Panier</button>';
+            echo '</form>';
             ?>
+
+
         </main>
+
     </div>
 
     <script src="static/external/jquery/dist/jquery.min.js"></script>

@@ -41,7 +41,7 @@
                         echo '<section>';
                         echo '<img src="http://placehold.it/140x140">';
                         echo '<p class="plant">'.$row['description_produit'];
-                        echo '<a class="btn btn-default" href="http://localhost:8080/mini-projet/produit.php?id_produitt='.$row[id_produitt].'" role="button">En savoir plus</a>';
+                        echo '<a class="btn btn-default" href="http://localhost:8080/mini-projet/produit.php?id_produitt='.$row['id_produitt'].'" role="button">En savoir plus</a>';
                         echo '</p>';
                         echo '<p class="prix">'.$row["price_produit"].' $</p>';
                         echo '</section></div>';

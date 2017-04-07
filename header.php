@@ -25,12 +25,12 @@
                     <span class="icon-bar"></span>
                     </button>
                         <h2 class=" enjoy-css" href="#">Mini Projet</h2>
-                    </div>price_produit
+                    </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
                             <li><a href="index.html">Home</a></li>
-                            <li class="active"><a href="catalog.php">Catalogue</a></li>
-                            <li><a href="panier.html">Panier</a></li>
+                            <li><a href="catalog.php">Catalogue</a></li>
+                            <li><a href="panier.php">Panier</a></li>
                             <li><a href="form.html">Contact</a></li>
                         </ul>
                     </div>
