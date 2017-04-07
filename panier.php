@@ -3,6 +3,14 @@
         <main id="panier">
             <h3>Panier <i class="fa fa-shopping-basket" aria-hidden="true"></i></h3>
             <p>Votre panier contient 1 produit(s)</p>
+            <table style="width:100%">
+                  <tr>
+                    <th>Produit</th>
+                    <th>Prix</th>
+                    <th>Quantité</th>
+                    <th>Total</th>
+                  </tr>
+                </table>
         </main>
 
         <?php
@@ -15,19 +23,21 @@
         $mysql = new MySQLi(MYSQL_SERVEUR, MYSQL_UTILISATEUR, MYSQL_MOTDEPASSE, MYSQL_BASE);
 
         $mysql->set_charset("utf8");
+
+
+        if (isset($_POST['quantity'])) {
+
+            $sql = "INSERT INTO contient_cart (id_of_cart, id_produitt, quantity_contient)
+            VALUES ('1', '".$_POST['id']."', '".$_POST['quantity']."');";
+            $result = $mysql->query($sql);
+        }
+
         $sql = 'SELECT * from  contient_cart join produitt on contient_cart.id_produitt = produitt.id_produitt';
         $result = $mysql->query($sql);
 
         while ($row = $result->fetch_assoc()){
 
         echo '<table style="width:100%">
-              <tr>
-                <th>Produit</th>
-                <th>Prix</th>
-                <th>Quantité</th>
-                <th>Total</th>
-                <th></th>
-              </tr>
               <tr>
                 <td>'.$row['name_produit'].'</td>
                 <td>'.$row['price_produit'].'$'.'</td>
