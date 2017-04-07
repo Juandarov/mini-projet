@@ -58,8 +58,7 @@
         </div>
     </div>
 
-
-
+    html5  
 
     <script src="static/external/jquery/dist/jquery.min.js"></script>
     <script src="static/external/bootstrap/dist/js/bootstrap.min.js"></script>

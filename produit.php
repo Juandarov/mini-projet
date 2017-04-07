@@ -21,7 +21,7 @@
             echo '<p class="plant">'.$row['description_produit'].'</p>';
             echo '<p class="prix">'.$row["price_produit"].' $</p>';
             echo '<form class="" action="panier.php"  method="post">';
-            echo '<input type="number" name="quantity" value="quantity"">';
+            echo '<input type="number" name="quantity" value="1" size="2">';
             echo '<button type="submit" name="button">Ajouter au Panier</button>';
             echo '<input style="display: none" type="text" name="id" value="'.$id.'"">';
             echo '</form>';
@@ -29,6 +29,8 @@
 
         </main>
 
+
+yolo
     </div>
 
     <script src="static/external/jquery/dist/jquery.min.js"></script>
